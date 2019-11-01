@@ -1,4 +1,5 @@
 __pycache__
+.vscode
 mars.json
 mars_cache.sqlite
 mars_api.py
