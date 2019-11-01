@@ -44,7 +44,12 @@ class DayAtMars():
         return press_on_mars
 
     def get_weather_info(self):
-        pass
+        print("""Goood morning! Today is going to be sunny day on Elysium Platinia. 
+        There will be no clouds. Temperature outside: """ + str(self.get_temp_on_mars) + """, 
+        light wind with speed """ + str(self.get_speed_of_wind_on_mars) + """ m/s. Air pressure is """ + 
+        str(self.get_pressure_on_mars) + """ Pa. Unfortunately there is still no chance to survive outside on Mars.
+        So brace yourself and prepare for another beautifull day on Earth. In case you ARE on Mars... so sunny weather
+        but still you are in a deep shit if you are outside without a spacesuit on.""")
 
 def job():
 
@@ -52,15 +57,16 @@ def job():
     mars_data = loader.load_mars_data()
     today = loader.get_today(mars_data)
     day_at_mars = DayAtMars(today)
-    current_temp_mars = day_at_mars.get_temp_on_mars(mars_data,day_at_mars)
-    current_mars_wind_speed = day_at_mars.get_speed_of_wind_on_mars(mars_data,day_at_mars)
-    current_pressure_on_mars = day_at_mars.get_pressure_on_mars(mars_data,day_at_mars)
-    print(current_temp_mars)
-    print(current_mars_wind_speed)
-    print(current_pressure_on_mars)
+    #current_temp_mars = day_at_mars.get_temp_on_mars(mars_data,day_at_mars)
+    #current_mars_wind_speed = day_at_mars.get_speed_of_wind_on_mars(mars_data,day_at_mars)
+    #current_pressure_on_mars = day_at_mars.get_pressure_on_mars(mars_data,day_at_mars)
+    day_at_mars.get_weather_info()
 
 def main(job):
     schedule.every().day.at("8:30").do(job)
+
+if __name__ == '__main__':
+    main(job)
 
 '''
 def telegram_send_text_massage(massage):
