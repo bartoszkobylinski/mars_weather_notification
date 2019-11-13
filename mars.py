@@ -6,7 +6,6 @@ from mars_api import NASA_API_KEY as nasa_key
 from mars_api import BOT_TOKEN as bot_token
 from mars_api import bot_chatID
 
-from mars_api import TELEGRAM_API_KEY as telegram_key
 
 
 
