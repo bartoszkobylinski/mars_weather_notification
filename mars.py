@@ -1,15 +1,14 @@
 import json
 import requests
-import requests_cache
 import schedule
 
 from mars_api import NASA_API_KEY as nasa_key
 from mars_api import BOT_TOKEN as bot_token
 from mars_api import bot_chatID
 
-# from mars_api import TELEGRAM_API_KEY as telegram_key
+from mars_api import TELEGRAM_API_KEY as telegram_key
 
-requests_cache.install_cache('mars_cache')
+
 
 
 class MarsDataLoader:
@@ -37,7 +36,6 @@ class DayAtMars(MarsDataLoader):
         weather but still you are in a deep shit if you are outside without a spacesuit on.'''
         return massage
 
-k = 'harrrrry'
 
 def telegram_send_text_massage(massage, bot_token, bot_chatID):
     
@@ -48,14 +46,9 @@ def telegram_send_text_massage(massage, bot_token, bot_chatID):
     return response.json()
 
 if __name__ == '__main__':
+
     data_from_nasa_api = MarsDataLoader(nasa_key)
     day_at_mars = DayAtMars(data_from_nasa_api.content)
     current_condition_on_mars = day_at_mars.create_weather_on_mars_information()
-    print(type(current_condition_on_mars))
-    print(type(k))
-    telegram_send_text_massage(k,bot_token,bot_chatID)
     telegram_send_text_massage(current_condition_on_mars,bot_token,bot_chatID)
-   
-
-
 
