@@ -1,6 +1,6 @@
 # Mars Weather Information
 
-    Program connecting to NASA API for daily information from Insigt Mars Lander about weather on Mars. It gets maximum, minimum and avarage temperature than converted to Celsius scale, wind speed, and pressure in Pa (Pressure on Mars is comparable with pressure on 35km above Earth surface). Insight Mars Lander is located on Elysium Planitia. It's a place on Mars very close to the equator of Mars. Additionally application is sending daily information at 8:00 to chat on Telegram.
+Program connecting to NASA API for daily information from Insigt Mars Lander about weather on Mars. It gets maximum, minimum and avarage temperature than converted to Celsius scale, wind speed, and pressure in Pa (Pressure on Mars is comparable with pressure on 35km above Earth surface). Insight Mars Lander is located on Elysium Planitia. It's a place on Mars very close to the equator of Mars. Additionally application is sending daily information at 8:00 to chat on Telegram.
 
 ## Install Application
 
