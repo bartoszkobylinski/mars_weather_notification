@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="img-div">
+            <img src="{{ url_for('static', filename='images/mars_image.png') }}" alt="mars_image">
+        </div> 
+        <div class="mars-data">
+            <div class="header">
+                <h2>Weather condition on Elysium Planitia on Mars</h2>
+            </div>
+            <div class="mars-data-details">
+                <div class="mars-data__info">
+                    <h4>Min Temp</h4>
+                    <h5>{{ mars.min_temp}} &#8451;</h5>
+                </div>
+                <div class="mars-data__info">
+                    <h4>Max Temp</h4>
+                    <h5>{{mars.max_temp}} &#8451;</h5>
+                </div>
+                <div class="mars-data__info">
+                    <h4>Av Temp</h4>
+                    <h5>{{mars.av_temp}} &#8451;</h5>
+                </div>
+                <div class="mars-data__info">
+                    <h4>Wind Speed</h4>
+                    <h5>{{mars.wind_speed}} m/s</h5>
+                </div>
+                <div class="mars-data__info">
+                    <h4>Atmospheric pressure</h4>
+                    <h5>{{mars.press}} Pa</h5>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

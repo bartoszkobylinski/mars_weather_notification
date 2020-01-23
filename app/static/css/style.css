@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #99857a;
+    font-family: 'Roboto Mono', monospace;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
+}
+.img-div img{
+    width: 100%;
+}
+.mars-data{
+    display: flex;
+    flex-direction: column;
+}
+.mars-data-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ff9d6f;
+    justify-content: center;
+}
+.mars-data__info{
+    margin:15px;
+    background-color: #663926;
+    border: solid black 2px;
+    border-radius: 5%;
+    width: 250px;
+    height: 150px;
+}
+.mars-data__info h4{
+    margin: 0;
+    padding: 0.3rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #f6f6f6;
+}
+.mars-data__info h5{
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ececec;
+}
+.header{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ececec;
+    text-align: center;
+}
